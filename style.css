@@ -1,0 +1,110 @@
+body {
+    background-color: #2e2e2e;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.profile-header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid #444;
+}
+.profile-picture {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+.profile-header h1 {
+    font-size: 48px;
+    margin: 10px 0;
+}
+.bio {
+    font-size: 18px;
+    color: #aaa;
+    margin: 10px 0;
+}
+.button-follow {
+    display: inline-block;
+    padding: 10px 50px;
+    background-color: #6a0dad;
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+.button-follow:hover {
+    background-color: #4b0082;
+}
+.followers {
+    margin-top: 20px;
+}
+.repo {
+    border: 1px solid #444;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #3e3e3e;
+    position: relative;
+}
+.repo h4 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.repo .status {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.button-purple {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #6a0dad;
+    color: #ffffff;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.button-purple:hover {
+    background-color: #4b0082;
+}
+.button-outline {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #6a0dad;
+    border: 2px solid #6a0dad;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.button-outline:hover {
+    background-color: #f0f0f0;
+}
+.language-bar {
+    margin-top: 15px;
+    display: none;
+}
+.language-bar .bar {
+    margin: 5px 0;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #444;
+}
+.language-bar .bar div {
+    height: 100%;
+    text-align: center;
+    line-height: 20px;
+    color: #fff;
+    font-size: 14px;
+  }
