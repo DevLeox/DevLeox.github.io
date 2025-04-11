@@ -10,6 +10,9 @@ async function fetchProfileData() {
     document.getElementById('bio').textContent = data.bio || 'No bio available';
     document.getElementById('followers-count').textContent = data.followers;
     document.getElementById('following-count').textContent = data.following;
+    document.getElementById('follow-button').onclick = () => {
+        window.open(`https://github.com/${username}?tab=followers`, '_blank');
+    };
 }
 
 async function fetchRepositories() {
@@ -18,7 +21,7 @@ async function fetchRepositories() {
     const repoList = document.getElementById('repo-list');
     repos.forEach(repo => {
         const repoDiv = document.createElement('div');
-        repoDiv.className = 'repo';
+        repoDiv.className = 'repo fade-in';
         repoDiv.innerHTML = `
             <div class="status">${repo.private ? 'Private' : 'Public'}</div>
             <h4>${repo.name}</h4>
@@ -29,6 +32,7 @@ async function fetchRepositories() {
         `;
         repoList.appendChild(repoDiv);
     });
+    revealOnScroll();
 }
 
 async function toggleLanguages(button, languagesUrl) {
@@ -51,6 +55,18 @@ async function toggleLanguages(button, languagesUrl) {
         languageBar.style.display = "none";
         button.textContent = "Show Languages";
     }
+}
+
+function revealOnScroll() {
+    const elements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    });
+    elements.forEach(el => observer.observe(el));
 }
 
 fetchProfileData();
